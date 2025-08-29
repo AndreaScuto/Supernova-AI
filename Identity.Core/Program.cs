@@ -4,10 +4,10 @@ using IdentityService.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers()
-    .AddApplicationPart(typeof(IdentityService.Api.Controllers.IdentityController).Assembly);
+builder.Services.AddControllers();
 builder.Services.AddScoped<IdentityService.Application.Services.IdentityService>();
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var mongoUri = Environment.GetEnvironmentVariable("MONGO_URI");
 var mongoDbName = Environment.GetEnvironmentVariable("MONGO_DB_SUPERNOVA_IDENTITY");
@@ -16,12 +16,12 @@ builder.Services.AddSingleton<IIdentityDbContext>(_ => new IdentityDbContext(mon
 
 builder.Services.AddScoped<IIdentityRepository, IdentityRepository>();
 
-
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseAuthorization();
