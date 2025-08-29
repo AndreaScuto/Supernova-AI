@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Domain", "AuthS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Application", "AuthService.Application\AuthService.Application.csproj", "{86C0BC56-A608-4565-BB89-DB8C335F81AD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RealtimeService", "RealtimeService", "{619F3F8F-ECEC-4ABA-9E9E-22FE5DA06E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBootstrap", "CoreBootstrap\CoreBootstrap.csproj", "{643EBA26-2504-4509-BA47-1B66C64E19BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +64,10 @@ Global
 		{86C0BC56-A608-4565-BB89-DB8C335F81AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C0BC56-A608-4565-BB89-DB8C335F81AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C0BC56-A608-4565-BB89-DB8C335F81AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{643EBA26-2504-4509-BA47-1B66C64E19BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{643EBA26-2504-4509-BA47-1B66C64E19BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{643EBA26-2504-4509-BA47-1B66C64E19BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{643EBA26-2504-4509-BA47-1B66C64E19BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{09A1F12B-26BB-4B7D-AEB8-E4069FC7EC95} = {8195B98D-B088-4064-A4FA-AD575AA1E817}
