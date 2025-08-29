@@ -4,15 +4,11 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>IdentityService.Application</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Repositories\" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="MongoDB.Bson" Version="3.4.3"/>
-        <PackageReference Include="MongoDB.Driver" Version="3.4.3"/>
+        <ProjectReference Include="..\Identity.Domain\Identity.Domain.csproj"/>
     </ItemGroup>
 
 </Project>

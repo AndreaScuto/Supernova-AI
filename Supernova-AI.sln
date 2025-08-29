@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ChatService", "ChatService", "{8195B98D-B088-4064-A4FA-AD575AA1E817}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthService", "AuthService", "{476EDC6C-002D-43D0-9699-0E87EF7F2E6F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "IdentityService", "{476EDC6C-002D-43D0-9699-0E87EF7F2E6F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{770B44B8-4D52-4FDE-B468-59FEC006DE71}"
 EndProject
@@ -14,17 +14,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatService.Api", "ChatServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatService.Domain", "ChatService.Domain\ChatService.Domain.csproj", "{DCB06F4E-3681-41AF-A901-41BD53EB18D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Api", "AuthService.Api\AuthService.Api.csproj", "{F188B7E5-0D2E-42E1-A4EB-B0616717B52D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Api", "Identity.Api\Identity.Api.csproj", "{F188B7E5-0D2E-42E1-A4EB-B0616717B52D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Infrastructure", "AuthService.Infrastructure\AuthService.Infrastructure.csproj", "{EF90F6BA-F75A-428C-B2AC-D50327C21B39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure", "Identity.Infrastructure\Identity.Infrastructure.csproj", "{EF90F6BA-F75A-428C-B2AC-D50327C21B39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Domain", "AuthService.Domain\AuthService.Domain.csproj", "{208B57A5-9EC4-4C3B-91D6-77AF252FBDC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "Identity.Domain\Identity.Domain.csproj", "{208B57A5-9EC4-4C3B-91D6-77AF252FBDC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Application", "AuthService.Application\AuthService.Application.csproj", "{86C0BC56-A608-4565-BB89-DB8C335F81AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application", "Identity.Application\Identity.Application.csproj", "{86C0BC56-A608-4565-BB89-DB8C335F81AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RealtimeService", "RealtimeService", "{619F3F8F-ECEC-4ABA-9E9E-22FE5DA06E6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBootstrap", "CoreBootstrap\CoreBootstrap.csproj", "{643EBA26-2504-4509-BA47-1B66C64E19BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Core", "Identity.Core\Identity.Core.csproj", "{F254152D-0C38-4F05-92B0-5A4E27E0CABF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,10 +64,10 @@ Global
 		{86C0BC56-A608-4565-BB89-DB8C335F81AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C0BC56-A608-4565-BB89-DB8C335F81AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C0BC56-A608-4565-BB89-DB8C335F81AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{643EBA26-2504-4509-BA47-1B66C64E19BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{643EBA26-2504-4509-BA47-1B66C64E19BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{643EBA26-2504-4509-BA47-1B66C64E19BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{643EBA26-2504-4509-BA47-1B66C64E19BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F254152D-0C38-4F05-92B0-5A4E27E0CABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F254152D-0C38-4F05-92B0-5A4E27E0CABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F254152D-0C38-4F05-92B0-5A4E27E0CABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F254152D-0C38-4F05-92B0-5A4E27E0CABF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{09A1F12B-26BB-4B7D-AEB8-E4069FC7EC95} = {8195B98D-B088-4064-A4FA-AD575AA1E817}
@@ -78,5 +78,6 @@ Global
 		{EF90F6BA-F75A-428C-B2AC-D50327C21B39} = {476EDC6C-002D-43D0-9699-0E87EF7F2E6F}
 		{208B57A5-9EC4-4C3B-91D6-77AF252FBDC7} = {476EDC6C-002D-43D0-9699-0E87EF7F2E6F}
 		{86C0BC56-A608-4565-BB89-DB8C335F81AD} = {476EDC6C-002D-43D0-9699-0E87EF7F2E6F}
+		{F254152D-0C38-4F05-92B0-5A4E27E0CABF} = {476EDC6C-002D-43D0-9699-0E87EF7F2E6F}
 	EndGlobalSection
 EndGlobal

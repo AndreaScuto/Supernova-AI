@@ -1,13 +1,13 @@
 ﻿using MongoDB.Driver;
-using AuthService.Domain.Models;
+using IdentityService.Domain.Models;
 
-namespace AuthService.Infrastructure.Db;
+namespace IdentityService.Infrastructure.Db;
 
-public class AuthDbContext : IAuthDbContext
+public class IdentityDbContext : IIdentityDbContext
 {
     private readonly IMongoDatabase _database;
 
-    public AuthDbContext(string connectionString, string databaseName)
+    public IdentityDbContext(string connectionString, string databaseName)
     {
         if (string.IsNullOrEmpty(connectionString))
             throw new ArgumentNullException(nameof(connectionString));
@@ -16,6 +16,7 @@ public class AuthDbContext : IAuthDbContext
 
         var client = new MongoClient(connectionString);
         _database = client.GetDatabase(databaseName);
+        _database.CreateCollection("Users");
     }
 
     public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
