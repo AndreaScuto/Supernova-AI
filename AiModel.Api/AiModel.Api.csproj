@@ -7,7 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Controllers\"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\AiModel.Application\AiModel.Application.csproj"/>
+        <ProjectReference Include="..\AiModel.Domain\AiModel.Domain.csproj"/>
     </ItemGroup>
 
 </Project>
