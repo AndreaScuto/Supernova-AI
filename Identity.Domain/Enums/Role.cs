@@ -1,8 +1,7 @@
-﻿namespace IdentityService.Domain.Models;
+﻿namespace IdentityService.Domain.Enums;
 
 public enum Role
 {
     Admin,
-    User,
-    Supernova
+    User
 }
