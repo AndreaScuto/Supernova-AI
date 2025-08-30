@@ -1,5 +1,6 @@
 ﻿using IdentityService.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
+using IdentityService.Application.Services;
 
 namespace IdentityService.Api.Controllers;
 

@@ -1,7 +1,7 @@
 ﻿using MongoDB.Driver;
 using IdentityService.Domain.Models;
 
-namespace IdentityService.Infrastructure.Db;
+namespace IdentityService.Infrastructure.Interfaces;
 
 public interface IIdentityDbContext
 {
