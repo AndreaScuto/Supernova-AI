@@ -1,5 +1,6 @@
 ﻿using MongoDB.Driver;
 using IdentityService.Domain.Models;
+using IdentityService.Infrastructure.Interfaces;
 
 namespace IdentityService.Infrastructure.Db;
 

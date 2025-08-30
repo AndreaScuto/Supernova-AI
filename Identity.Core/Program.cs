@@ -1,5 +1,6 @@
 using IdentityService.Application.Interfaces;
 using IdentityService.Infrastructure.Db;
+using IdentityService.Infrastructure.Interfaces;
 using IdentityService.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
