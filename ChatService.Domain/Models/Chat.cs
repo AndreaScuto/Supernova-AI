@@ -9,5 +9,6 @@ public class Chat
     [BsonRepresentation(BsonType.ObjectId)]
     public ObjectId Id { get; set; }
 
+    public string Title { get; set; }
     public required List<Message?> Messages { get; set; }
 }
