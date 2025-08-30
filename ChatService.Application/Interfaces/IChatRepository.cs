@@ -9,4 +9,7 @@ public interface IChatRepository
     public Task<List<ChatHistory?>?> GetChatHistoryAsync();
     public Task<List<Message?>> GetMessagesAsync(ObjectId chatId);
     public Task CreateChatAsync(Message message);
+    public Task AddMessageToChat(ObjectId chatId, Message message);
+
+    //TODO: Aggiungere Task per il regen dell'ultimo messaggio
 }

@@ -36,4 +36,10 @@ public class ChatRepository(IChatDbContext context) : IChatRepository
             Messages = [message]
         });
     }
+
+    public async Task AddMessageToChat(ObjectId ChatId, Message message)
+    {
+        await context.Chats.UpdateOneAsync(chat => chat.Id == ChatId,
+            Builders<Chat>.Update.Push(chat => chat.Messages, message));
+    }
 }
