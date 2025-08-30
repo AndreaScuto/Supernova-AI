@@ -22,8 +22,8 @@ public class OpenRouterClient(HttpClient client)
             ContextLength = dto.ContextLength,
             Pricing = new Pricing
             {
-                PriceCompletion = dto.Pricing.Completion,
-                PricePrompt = dto.Pricing.Prompt
+                PriceCompletion = Convert.ToDouble(dto.Pricing.Completion),
+                PricePrompt = Convert.ToDouble(dto.Pricing.Prompt)
             }
         }).ToList();
     }

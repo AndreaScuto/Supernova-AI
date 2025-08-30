@@ -8,7 +8,7 @@ namespace AiModel.Api.Controllers;
 [Route("api/[controller]")]
 public class AiModelController(AiModelService aiModelService) : ControllerBase
 {
-    [HttpGet("AiModels")]
+    [HttpGet("Models")]
     public async Task<ActionResult<List<Ai>?>> GetAiModels()
     {
         var aiModels = await aiModelService.FetchOpenRouterModels();

@@ -8,7 +8,7 @@ public class OpenRouterModelDto
 
     [JsonPropertyName("description")] public required string Description { get; set; }
 
-    [JsonPropertyName("release")] public required long ReleaseDate { get; set; }
+    [JsonPropertyName("created")] public required long ReleaseDate { get; set; }
 
     [JsonPropertyName("name")] public required string Name { get; set; }
 

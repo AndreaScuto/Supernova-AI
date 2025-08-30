@@ -4,7 +4,7 @@ namespace AiModel.Domain.DTO;
 
 public class PricingDto
 {
-    [JsonPropertyName("prompt")] public required double Prompt { get; set; }
+    [JsonPropertyName("prompt")] public required string Prompt { get; set; }
 
-    [JsonPropertyName("completion")] public required double Completion { get; set; }
+    [JsonPropertyName("completion")] public required string Completion { get; set; }
 }
