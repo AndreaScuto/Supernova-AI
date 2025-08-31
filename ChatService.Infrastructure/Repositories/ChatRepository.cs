@@ -15,6 +15,7 @@ public class ChatRepository(IChatDbContext context) : IChatRepository
 
     public async Task<List<ChatHistory?>?> GetChatHistoryAsync()
     {
+        //TODO: Implementare Lazy Loading
         return (await context.Chats.Find(_ => true).Project(chat => new ChatHistory
         {
             Id = chat.Id,
