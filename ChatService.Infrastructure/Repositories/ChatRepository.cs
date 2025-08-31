@@ -27,19 +27,24 @@ public class ChatRepository(IChatDbContext context) : IChatRepository
         return await context.Chats.Find(chat => chat.Id == chatId).Project(chat => chat.Messages).FirstOrDefaultAsync();
     }
 
-    public async Task CreateChatAsync(Message message)
+    public async Task<ObjectId> CreateChatAsync(Message message)
     {
+        var objId = ObjectId.GenerateNewId();
         await context.Chats.InsertOneAsync(new Chat
         {
-            Id = new ObjectId(),
+            Id = objId,
             Title = "Titolo di TEST", //TODO: Inserire meccanismo di generazione titolo con AI
             Messages = [message]
         });
+        return objId;
     }
 
-    public async Task AddMessageToChat(ObjectId ChatId, Message message)
+    public async Task<ObjectId> AddMessageToChat(ObjectId chatId, Message message)
     {
-        await context.Chats.UpdateOneAsync(chat => chat.Id == ChatId,
+        var objId = ObjectId.GenerateNewId();
+        message.Id = objId;
+        await context.Chats.UpdateOneAsync(chat => chat.Id == chatId,
             Builders<Chat>.Update.Push(chat => chat.Messages, message));
+        return objId;
     }
 }
