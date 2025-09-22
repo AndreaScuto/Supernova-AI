@@ -8,7 +8,7 @@ public class Message
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public ObjectId Id { get; set; }
+    public ObjectId? Id { get; set; }
 
     public required Role Role { get; set; }
     public required string Content { get; set; }
