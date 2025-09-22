@@ -8,10 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Services\" />
-    </ItemGroup>
-
-    <ItemGroup>
         <ProjectReference Include="..\ChatService.Domain\ChatService.Domain.csproj"/>
     </ItemGroup>
 
